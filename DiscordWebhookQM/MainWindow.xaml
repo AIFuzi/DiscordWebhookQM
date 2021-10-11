@@ -9,12 +9,19 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" x:Name="TB_TextMessage" Text="text test" BorderThickness="1" Margin="5 5 5 350" BorderBrush="Black"/>
-            <Button Grid.Column="1" Margin="5 5 5 350" Content="Send" x:Name="B_SendMessage" Click="B_SendMessage_Click"/>
+            <TextBox Grid.Column="0" Grid.Row="0" x:Name="TB_TextMessage" Text="text test" BorderThickness="1" Margin="5" BorderBrush="Black"/>
+            <Button Grid.Column="1" Grid.Row="0" Margin="5" Content="Send" x:Name="B_SendMessage" Click="B_SendMessage_Click"/>
+            <Button Grid.Column="0" Grid.Row="1" Margin="5" Content="Select file" x:Name="B_OpenFileDir" Click="B_OpenFileDir_Click"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Null" x:Name="T_FileNae"/>
         </Grid>
     </Grid>
 </Window>
