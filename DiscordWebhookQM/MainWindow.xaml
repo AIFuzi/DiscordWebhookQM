@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:DiscordWebhookQM"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -20,6 +21,7 @@
             </Grid.ColumnDefinitions>
             <TextBox Grid.Column="0" Grid.Row="0" x:Name="TB_TextMessage" Text="text test" BorderThickness="1" Margin="5" BorderBrush="Black"/>
             <Button Grid.Column="1" Grid.Row="0" Margin="5" Content="Send" x:Name="B_SendMessage" Click="B_SendMessage_Click"/>
+            <TextBox Grid.Column="0" Grid.Row="1" x:Name="TB_ImageUrl" Text="text test" BorderThickness="1" Margin="5" BorderBrush="Black"/>
             <TextBlock Grid.Row="1" Grid.Column="1" Text="Null" x:Name="T_FileNae"/>
         </Grid>
     </Grid>

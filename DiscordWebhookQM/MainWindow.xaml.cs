@@ -33,14 +33,19 @@ namespace DiscordWebhookQM
             
         }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed) DragMove(); 
+        }
+
         private void B_SendMessage_Click(object sender, RoutedEventArgs e)
         {
             InitWebTH();
-            SendMessage(TB_TextMessage.Text);
+            SendMessage(TB_TextMessage.Text, TB_ImageUrl.Text);
             ClearWebTH();
         }
 
-        private void SendMessage(string Message)
+        private void SendMessage(string Message, string ImageUrl)
         {
             try
             {
@@ -49,7 +54,17 @@ namespace DiscordWebhookQM
                     string jsonMsg = JsonConvert.SerializeObject(new
                     {
                         username = "",
-                        content = Message
+                        content = Message,
+                        embeds = new[]
+                        {
+                            new
+                            {
+                                title = "1",
+                                description = "2",
+                                color = 2361167,
+                                image = new{url = TB_ImageUrl.Text}
+                            }
+                        }
                     });
 
                     messageWriter.Write(jsonMsg);
