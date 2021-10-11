@@ -27,7 +27,7 @@ namespace DiscordWebhookQM
         private void B_SendMessage_Click(object sender, RoutedEventArgs e)
         {
             InitWebTH();
-            SendMessage(TB_TextMessage.Text, TB_ImageUrl.Text);
+            //SendMessage(TB_TextMessage.Text, TB_ImageUrl.Text);
             ClearWebTH();
         }
 
@@ -44,16 +44,16 @@ namespace DiscordWebhookQM
                     {
                         username = "",
                         content = Message,
-                        embeds = new[]
-                        {
-                            new
-                            {
-                                title = "",
-                                description = "",
-                                color = col,
-                                image = new { url = TB_ImageUrl.Text }
-                            }
-                        }
+                        //embeds = new[]
+                        //{
+                        //    new
+                        //    {
+                        //        title = "",
+                        //        description = "",
+                        //        color = col,
+                        //        image = new { url = TB_ImageUrl.Text }
+                        //    }
+                        //}
                     });
 
                     messageWriter.Write(jsonMsg);
@@ -82,6 +82,16 @@ namespace DiscordWebhookQM
         private static void ShowError(Exception ErrorMessage)
         {
             System.Windows.MessageBox.Show(ErrorMessage.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void B_Minimaze_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void B_Exit_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

@@ -2,27 +2,40 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:local="clr-namespace:DiscordWebhookQM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="900" Width="1600"
         WindowStartupLocation="CenterScreen"
-        MouseDown="Window_MouseDown">
+        Background="Transparent"
+        WindowStyle="None"
+        AllowsTransparency="True">
     <Grid>
+
+        <Border Background="#212121" CornerRadius="10"/>
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Grid.Row="0" x:Name="TB_TextMessage" Text="text test" BorderThickness="1" Margin="5" BorderBrush="Black"/>
-            <Button Grid.Column="1" Grid.Row="0" Margin="5" Content="Send" x:Name="B_SendMessage" Click="B_SendMessage_Click"/>
-            <TextBox Grid.Column="0" Grid.Row="1" x:Name="TB_ImageUrl" Text="text test" BorderThickness="1" Margin="5" BorderBrush="Black"/>
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="Null" x:Name="T_FileNae"/>
+            
+            <Grid Grid.Row="0" x:Name="TitleBar" MouseDown="Window_MouseDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1500"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="DiscordWebhookQM" Margin="15 0 0 0" Foreground="#d4d4d4" FontSize="18"/>
+                <Ellipse Grid.Column="1" Fill="#D980FA" Margin="15" x:Name="B_Minimaze" MouseDown="B_Minimaze_MouseDown"/>
+                <Ellipse Grid.Column="2" Fill="#EA2027" Margin="15" x:Name="B_Exit" MouseDown="B_Exit_MouseDown"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                
+            </Grid>
         </Grid>
+
+        
     </Grid>
 </Window>
