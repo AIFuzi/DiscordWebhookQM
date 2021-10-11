@@ -22,41 +22,62 @@ using Newtonsoft.Json;
 namespace DiscordWebhookQM
 {
     public partial class MainWindow : Window
-    { 
+    {
+        private string WebhookUrl = "https://discord.com/api/webhooks/897063901315878912/DdD6cveWeq1lX9QBpLRVI5PO1sBSOASXRXut8T9-UlFiWdLylxxOgxMq4pRmhoQwFewB";
+        private WebRequest wRequest;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            
         }
 
         private void B_SendMessage_Click(object sender, RoutedEventArgs e)
         {
-            SendMessageWebhook("https://discord.com/api/webhooks/897063901315878912/DdD6cveWeq1lX9QBpLRVI5PO1sBSOASXRXut8T9-UlFiWdLylxxOgxMq4pRmhoQwFewB", fileName, "");
+            InitWebTH();
+            SendMessage(TB_TextMessage.Text);
+            ClearWebTH();
         }
 
-        private static void SendMessageWebhook(string Url, string Message, string Username)
+        private void SendMessage(string Message)
         {
-            WebhookWorker.Send(Url, new NameValueCollection()
+            try
             {
+                using (var messageWriter = new StreamWriter(wRequest.GetRequestStream()))
                 {
-                    "username", Username
-                },
-                {
-                    "content", Message
+                    string jsonMsg = JsonConvert.SerializeObject(new
+                    {
+                        username = "",
+                        content = Message
+                    });
+
+                    messageWriter.Write(jsonMsg);
                 }
-            });
+
+                var response = (HttpWebResponse)wRequest.GetResponse();
+            }
+            catch(Exception e)
+            {
+                ShowError(e);
+            }
         }
 
-        private void B_OpenFileDir_Click(object sender, RoutedEventArgs e)
+        private void ClearWebTH()
         {
-            
+            wRequest = null;
+        }
 
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            DialogResult dgRes = openFileDialog.ShowDialog();
+        private void InitWebTH()
+        {
+            wRequest = (HttpWebRequest)WebRequest.Create(WebhookUrl);
+            wRequest.ContentType = "application/json";
+            wRequest.Method = "POST";
+        }
 
-            if(dgRes == System.Windows.Forms.DialogResult.OK)
-            {
-                T_FileNae.Text = openFileDialog.FileName;
-            }
+        private static void ShowError(Exception ErrorMessage)
+        {
+            System.Windows.MessageBox.Show(ErrorMessage.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

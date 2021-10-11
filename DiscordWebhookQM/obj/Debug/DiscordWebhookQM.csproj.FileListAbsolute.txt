@@ -13,3 +13,6 @@ H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.CoreCompileInputs.cache
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.exe
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.pdb
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\Newtonsoft.Json.dll
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\Newtonsoft.Json.xml
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.CopyComplete
