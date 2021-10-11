@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiscordWebhookQM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" x:Name="TB_TextMessage" Text="text test" BorderThickness="1" Margin="5 5 5 350" BorderBrush="Black"/>
+            <Button Grid.Column="1" Margin="5 5 5 350" Content="Send" x:Name="B_SendMessage" Click="B_SendMessage_Click"/>
+        </Grid>
     </Grid>
 </Window>

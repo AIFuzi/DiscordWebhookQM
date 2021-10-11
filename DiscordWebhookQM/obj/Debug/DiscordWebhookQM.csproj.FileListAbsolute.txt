@@ -1,0 +1,15 @@
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\DiscordWebhookQM.exe.config
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\DiscordWebhookQM.exe
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\DiscordWebhookQM.pdb
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.AssemblyReference.cache
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\MainWindow.g.cs
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\App.g.cs
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM_MarkupCompile.cache
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM_MarkupCompile.lref
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\MainWindow.baml
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.g.resources
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.Properties.Resources.resources
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.GenerateResource.cache
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.CoreCompileInputs.cache
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.exe
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.pdb
