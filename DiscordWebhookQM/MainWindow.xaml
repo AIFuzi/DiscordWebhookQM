@@ -26,14 +26,43 @@
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="50"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Content="DiscordWebhookQM" Margin="15 0 0 0" Foreground="#d4d4d4" FontSize="18"/>
-                <Ellipse Grid.Column="1" Fill="#D980FA" Margin="15" x:Name="B_Minimaze" MouseDown="B_Minimaze_MouseDown"/>
-                <Ellipse Grid.Column="2" Fill="#EA2027" Margin="15" x:Name="B_Exit" MouseDown="B_Exit_MouseDown"/>
+                <Label Grid.Column="0" Content="DiscordWebhookQM" Margin="15 10 0 0" Foreground="#d4d4d4" FontSize="18"/>
+                <Ellipse Grid.Column="1" Fill="#D980FA" Margin="15" x:Name="B_Minimaze" MouseDown="B_Minimaze_MouseDown">
+                    <Ellipse.Effect>
+                        <DropShadowEffect Color="#D980FA" ShadowDepth="0"/>
+                    </Ellipse.Effect>
+                </Ellipse>
+                <Ellipse Grid.Column="2" Fill="#EA2027" Margin="15" x:Name="B_Exit" MouseDown="B_Exit_MouseDown">
+                    <Ellipse.Effect>
+                        <DropShadowEffect Color="#EA2027" ShadowDepth="0"/>
+                    </Ellipse.Effect>
+                </Ellipse>
             </Grid>
 
             <Grid Grid.Row="1">
-                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Border Background="#181818" CornerRadius="5" Margin="10 0 10 10">
+                        <Border.Effect>
+                            <DropShadowEffect Color="#555" ShadowDepth="0" BlurRadius="10"/>
+                        </Border.Effect>
+                    </Border>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBox Background="#212121" Margin="20 10 20 10" BorderThickness="0"/>
+                        <Button Grid.Row="1"/>
+                    </Grid>
+                </Grid>
             </Grid>
+    
         </Grid>
 
         
