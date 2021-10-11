@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.IO;
 using Newtonsoft.Json;
+using DiscordWebhookQM.Windows;
 
 namespace DiscordWebhookQM
 {
@@ -92,6 +93,12 @@ namespace DiscordWebhookQM
         private void B_Exit_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void B_CreateNewWebhook_Click(object sender, RoutedEventArgs e)
+        {
+            WebhookListItem webhookItem = new WebhookListItem();
+            SP_WebhooksList.Children.Add(webhookItem);
         }
     }
 }

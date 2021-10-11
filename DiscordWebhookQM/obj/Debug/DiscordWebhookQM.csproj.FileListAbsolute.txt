@@ -16,3 +16,5 @@ H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.pdb
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\Newtonsoft.Json.dll
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\Newtonsoft.Json.xml
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.CopyComplete
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\WebhookListItem.g.cs
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\WebhookListItem.baml
