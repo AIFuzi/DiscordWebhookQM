@@ -5,8 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DiscordWebhookQM.Windows"
              mc:Ignorable="d" 
-             d:DesignHeight="90" d:DesignWidth="200">
-    <Grid Background="#fff">
-        <Button Content="awdwadwad"/>
+             d:DesignHeight="90" d:DesignWidth="500">
+    <Grid>
+        <Border Background="#212121" CornerRadius="5"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <Border BorderThickness="0" CornerRadius="50" Margin="15">
+                <!--<Border.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="../DefaultAssets/DarthDeb.jpg"/>
+                </Border.Background>-->
+                <Image Source="../DefaultAssets/DarthDeb.jpg"/>
+            </Border>
+
+        </Grid>
+
     </Grid>
 </UserControl>

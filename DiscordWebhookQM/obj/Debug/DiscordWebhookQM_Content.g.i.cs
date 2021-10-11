@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("style/scrollstyle.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("defaultassets/darthdeb.jpg")]
 
 
