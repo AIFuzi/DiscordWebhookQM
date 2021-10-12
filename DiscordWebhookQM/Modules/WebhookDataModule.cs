@@ -10,6 +10,17 @@ namespace DiscordWebhookQM.Modules
 {
     class WebhookDataModule
     {
+        private static string WebhooksPath = "@WebhooksProfile";
 
+        public static bool CheckWebhooksDirectory()
+        {
+            DirectoryInfo directoryInfo = new DirectoryInfo(WebhooksPath);
+            if()
+            {
+
+            }
+
+            return false;
+        }
     }
 }

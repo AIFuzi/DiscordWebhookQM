@@ -12,17 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DiscordWebhookQM.Modules;
 
 namespace DiscordWebhookQM.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для CreateWebhookPage.xaml
-    /// </summary>
     public partial class CreateWebhookPage : UserControl
     {
         public CreateWebhookPage()
         {
             InitializeComponent();
+        }
+
+        private void B_CreateWebhook_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
