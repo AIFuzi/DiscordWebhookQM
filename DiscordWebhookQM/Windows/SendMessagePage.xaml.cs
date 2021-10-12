@@ -15,20 +15,14 @@ using System.Windows.Shapes;
 
 namespace DiscordWebhookQM.Windows
 {
-    public partial class WebhookListItem : UserControl
+    /// <summary>
+    /// Логика взаимодействия для SendMessagePage.xaml
+    /// </summary>
+    public partial class SendMessagePage : Page
     {
-        MainWindow MainWindow;
-
-        public WebhookListItem(MainWindow mainWindow)
+        public SendMessagePage()
         {
             InitializeComponent();
-
-            MainWindow = mainWindow;
-        }
-
-        private void B_DeleteWebhook_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow.SP_WebhooksList.Children.Remove(this);
         }
     }
 }
