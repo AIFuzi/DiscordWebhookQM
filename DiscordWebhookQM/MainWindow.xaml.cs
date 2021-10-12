@@ -97,8 +97,12 @@ namespace DiscordWebhookQM
 
         private void B_CreateNewWebhook_Click(object sender, RoutedEventArgs e)
         {
-            WebhookListItem webhookItem = new WebhookListItem(this);
-            SP_WebhooksList.Children.Add(webhookItem);
+            CreateWebhookPage createWebhookPage = new CreateWebhookPage();
+
+            F_MainPage.Children.Clear();
+            SP_MainPage.Children.Add(createWebhookPage);
+            //WebhookListItem webhookItem = new WebhookListItem(this);
+            //SP_WebhooksList.Children.Add(webhookItem);
         }
 
     }

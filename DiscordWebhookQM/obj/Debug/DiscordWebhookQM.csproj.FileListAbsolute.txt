@@ -37,3 +37,7 @@ D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.cspro
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.CoreCompileInputs.cache
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.exe
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.pdb
+D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\CreateWebhookPage.g.cs
+D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\SendMessagePage.g.cs
+D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\CreateWebhookPage.baml
+D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\SendMessagePage.baml

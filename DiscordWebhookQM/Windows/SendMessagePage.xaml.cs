@@ -18,7 +18,7 @@ namespace DiscordWebhookQM.Windows
     /// <summary>
     /// Логика взаимодействия для SendMessagePage.xaml
     /// </summary>
-    public partial class SendMessagePage : Page
+    public partial class SendMessagePage : UserControl
     {
         public SendMessagePage()
         {

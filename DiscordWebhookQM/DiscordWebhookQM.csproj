@@ -60,6 +60,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Modules\WebhookDataModule.cs" />
+    <Compile Include="Windows\CreateWebhookPage.xaml.cs">
+      <DependentUpon>CreateWebhookPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SendMessagePage.xaml.cs">
+      <DependentUpon>SendMessagePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\WebhookListItem.xaml.cs">
       <DependentUpon>WebhookListItem.xaml</DependentUpon>
     </Compile>
@@ -75,6 +82,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\CreateWebhookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SendMessagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\WebhookListItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -133,7 +133,10 @@
                             </StackPanel>
                         </ScrollViewer>
                     </Grid>
+
                 </Grid>
+                <StackPanel Grid.Row="0" Grid.Column="1" Margin="15" x:Name="SP_MainPage"/>
+                
             </Grid>
 
         </Grid>

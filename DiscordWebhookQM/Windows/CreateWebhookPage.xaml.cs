@@ -18,7 +18,7 @@ namespace DiscordWebhookQM.Windows
     /// <summary>
     /// Логика взаимодействия для CreateWebhookPage.xaml
     /// </summary>
-    public partial class CreateWebhookPage : Page
+    public partial class CreateWebhookPage : UserControl
     {
         public CreateWebhookPage()
         {
