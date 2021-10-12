@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\App.xaml
-3736188564
+4878596243
 
-81032471968
+102143442065
 15-896770017
-MainWindow.xaml;Windows\SendMessagePage.xaml;Windows\WebhookListItem.xaml;
+MainWindow.xaml;Windows\CreateWebhookPage.xaml;Windows\SendMessagePage.xaml;Windows\WebhookListItem.xaml;
 
 True
 
