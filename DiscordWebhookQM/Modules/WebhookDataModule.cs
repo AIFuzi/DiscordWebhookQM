@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DiscordWebhookQM.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
+using System.Windows.Navigation;
 
 namespace DiscordWebhookQM.Modules
 {
@@ -67,12 +68,24 @@ namespace DiscordWebhookQM.Modules
             foreach (string currentFileName in Directory.GetFiles(WebhooksPath))
             {
                 var path = Path.GetFileName(currentFileName).Split('.');
-                main.SP_WebhooksList.Children.Add(webhookList = new WebhookListItem(main, path[0]));
+                var avatarBitmap = new BitmapImage();
+
+                if (File.Exists($"{WebhooksAvatars}/{path[0]}.jpg"))
+                {
+                    avatarBitmap.BeginInit();
+                    avatarBitmap.UriSource = new Uri($"{WebhooksAvatars}/{path[0]}.jpg", UriKind.RelativeOrAbsolute);
+                    avatarBitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    avatarBitmap.EndInit();
+                }
+
+                var avatarImage = new ImageBrush(avatarBitmap);
+                main.SP_WebhooksList.Children.Add(webhookList = new WebhookListItem(main, path[0], avatarImage));
             }
         }
 
         public void DeleteWebhookProfile(string WebhookName)
         {
+            File.Delete($"{WebhooksAvatars}/{WebhookName}.jpg");
             File.Delete($"{WebhooksPath}/{WebhookName}.dwm");
         }
         
@@ -88,11 +101,6 @@ namespace DiscordWebhookQM.Modules
                 jpegAvatar.Frames.Add(frame);
                 jpegAvatar.Save(fileStream);
             }
-        }
-
-        public void LoadAvatar(ImageBrush AvatarImage, string WebhookName)
-        {
-
         }
     }
 }

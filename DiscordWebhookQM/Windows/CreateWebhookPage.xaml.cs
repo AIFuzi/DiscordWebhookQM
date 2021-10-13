@@ -32,8 +32,9 @@ namespace DiscordWebhookQM.Windows
             WebhookDataModule wDataModule = new WebhookDataModule();
             wDataModule.InitWebhookModule();
             wDataModule.CreateWebhookData(TBx_WebhookName.Text, TBx_WebhoolURL.Text, null);
-            wDataModule.RefreshWebhooksList(MainWindow);
             wDataModule.SaveAvatar(IB_AvatarPrevie, TBx_WebhookName.Text);
+
+            wDataModule.RefreshWebhooksList(MainWindow);
         }
 
         private void B_SelectAvatar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

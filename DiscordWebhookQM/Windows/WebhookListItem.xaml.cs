@@ -21,12 +21,13 @@ namespace DiscordWebhookQM.Windows
     {
         MainWindow MainWindow;
 
-        public WebhookListItem(MainWindow mainWindow, string WebhookName)
+        public WebhookListItem(MainWindow mainWindow, string WebhookName, ImageBrush imageAvatar)
         {
             InitializeComponent();
 
             MainWindow = mainWindow;
             TB_WebhookName.Text = WebhookName;
+            if(imageAvatar != null) IB_Avatar.ImageSource = imageAvatar.ImageSource;
         }
 
         private void B_DeleteWebhook_Click(object sender, RoutedEventArgs e)
@@ -39,6 +40,7 @@ namespace DiscordWebhookQM.Windows
                 WebhookDataModule webhookData = new WebhookDataModule();
                 webhookData.DeleteWebhookProfile(TB_WebhookName.Text);
                 webhookData.RefreshWebhooksList(MainWindow);
+                IB_Avatar = null;
             }
         }
     }
