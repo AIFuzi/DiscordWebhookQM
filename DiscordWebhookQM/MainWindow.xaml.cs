@@ -97,7 +97,7 @@ namespace DiscordWebhookQM
 
         private void B_CreateNewWebhook_Click(object sender, RoutedEventArgs e)
         {
-            CreateWebhookPage createWebhookPage = new CreateWebhookPage();
+            CreateWebhookPage createWebhookPage = new CreateWebhookPage(this);
 
             SP_MainPage.Children.Clear();
             SP_MainPage.Children.Add(createWebhookPage);

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
 using System.Windows;
+using System.Windows.Forms;
 
 namespace DiscordWebhookQM.Modules
 {
@@ -30,8 +31,28 @@ namespace DiscordWebhookQM.Modules
         public void CreateWebhookData(string webhookName, string webhookURL, string webhookAvatarPath)
         {
             StreamWriter streamWriter = new StreamWriter($"{WebhooksPath}/{webhookName}.dwm");
-            streamWriter.Write("adad");
+
+            string jsonProfileInfo = JsonConvert.SerializeObject(new
+            {
+                webhookUrl = webhookURL
+            });
+
+            streamWriter.Write(jsonProfileInfo);
+            streamWriter.Flush();
             streamWriter.Close();
+        }
+
+        public string LoadWebhookProfiles()
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            DialogResult dgRes = fileDialog.ShowDialog();
+            if(dgRes == DialogResult.OK)
+            {
+                var path = Path.GetFileName(fileDialog.FileName).Split('.');
+                return path[0];
+            }
+
+            return null;
         }
     }
 }

@@ -19,11 +19,12 @@ namespace DiscordWebhookQM.Windows
     {
         MainWindow MainWindow;
 
-        public WebhookListItem(MainWindow mainWindow)
+        public WebhookListItem(MainWindow mainWindow, string WebhookName)
         {
             InitializeComponent();
 
             MainWindow = mainWindow;
+            TB_WebhookName.Text = WebhookName;
         }
 
         private void B_DeleteWebhook_Click(object sender, RoutedEventArgs e)
