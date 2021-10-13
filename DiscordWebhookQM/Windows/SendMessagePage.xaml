@@ -7,6 +7,43 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Webhook Name" Foreground="#fff" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" x:Name="TB_WebhookNameTitle"
+                   FontSize="24"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Webhook URL" Foreground="#fff" VerticalAlignment="Center" 
+                   HorizontalAlignment="Right"
+                   FontSize="16"/>
+
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="5 10" IsEnabled="False" x:Name="TBx_WebhookURL"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Message" Foreground="#fff" VerticalAlignment="Center" 
+                   HorizontalAlignment="Right"
+                   FontSize="16"/>
+
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="5 10" FontSize="16"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Image URL" Foreground="#fff" VerticalAlignment="Center" 
+                   HorizontalAlignment="Right"
+                   FontSize="16"/>
+
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="5 10"/>
+
+            <Button Grid.Column="1" Grid.Row="4" Margin="5 10" Content="Send" FontSize="18"/>
+
+        </Grid>
     </Grid>
 </UserControl>

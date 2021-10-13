@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
-using System.Windows;
 using System.Windows.Forms;
 using DiscordWebhookQM.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
-using System.Windows.Navigation;
 
 namespace DiscordWebhookQM.Modules
 {
@@ -101,6 +95,12 @@ namespace DiscordWebhookQM.Modules
                 jpegAvatar.Frames.Add(frame);
                 jpegAvatar.Save(fileStream);
             }
+        }
+
+        public string GetWebhookURLByName()
+        {
+
+            return null;
         }
     }
 }

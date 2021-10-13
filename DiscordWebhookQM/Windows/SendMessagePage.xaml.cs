@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 
 namespace DiscordWebhookQM.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для SendMessagePage.xaml
-    /// </summary>
     public partial class SendMessagePage : UserControl
     {
-        public SendMessagePage()
+        public SendMessagePage(string webhookName)
         {
             InitializeComponent();
+
+            TB_WebhookNameTitle.Text = webhookName;
         }
     }
 }

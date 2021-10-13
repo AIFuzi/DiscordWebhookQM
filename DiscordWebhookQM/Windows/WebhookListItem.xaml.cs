@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using DiscordWebhookQM.Modules;
-//using System.Windows.Forms;
 
 namespace DiscordWebhookQM.Windows
 {
@@ -42,6 +31,26 @@ namespace DiscordWebhookQM.Windows
                 webhookData.RefreshWebhooksList(MainWindow);
                 IB_Avatar = null;
             }
+        }
+
+        private void B_SelectCurrentWebhook_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            SendMessagePage sendMessage = new SendMessagePage(TB_WebhookName.Text);
+
+            MainWindow.SP_MainPage.Children.Clear();
+            MainWindow.SP_MainPage.Children.Add(sendMessage);
+        }
+
+        private void B_SelectCurrentWebhook_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            B_SelectCurrentWebhook.Background = (Brush)bc.ConvertFrom("#5d5d5d");
+        }
+
+        private void B_SelectCurrentWebhook_MouseLeave(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            B_SelectCurrentWebhook.Background = (Brush)bc.ConvertFrom("#212121");
         }
     }
 }
