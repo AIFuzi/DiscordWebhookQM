@@ -20,7 +20,6 @@
                 <Border.Background>
                     <ImageBrush Stretch="Fill" ImageSource="../DefaultAssets/DarthDeb.jpg"/>
                 </Border.Background>
-                <!--<Image Source="../DefaultAssets/DarthDeb.jpg"/>-->
             </Border>
 
             <TextBlock Grid.Column="1" x:Name="TB_WebhookName" Text="Гоблин Радик" Foreground="#d4d4d4" 

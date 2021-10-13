@@ -7,6 +7,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Windows;
 using System.Windows.Forms;
+using DiscordWebhookQM.Windows;
 
 namespace DiscordWebhookQM.Modules
 {
@@ -56,11 +57,21 @@ namespace DiscordWebhookQM.Modules
             return null;
         }
 
-        public string LoadWebhookProfiles_Auto()
+        public void RefreshWebhooksList(MainWindow main)
         {
+            main.SP_WebhooksList.Children.Clear();
+            WebhookListItem webhookList;
 
+            foreach (string currentFileName in Directory.GetFiles(WebhooksPath))
+            {
+                var path = Path.GetFileName(currentFileName).Split('.');
+                main.SP_WebhooksList.Children.Add(webhookList = new WebhookListItem(main, path[0]));
+            }
+        }
 
-            return null;
+        public void DeleteWebhookProfile(string WebhookName)
+        {
+            File.Delete($"{WebhooksPath}/{WebhookName}.dwm");
         }
     }
 }

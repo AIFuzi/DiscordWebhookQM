@@ -23,7 +23,14 @@ namespace DiscordWebhookQM
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            RefreshWebhooksList();
+            WebhookDataModule webhookData = new WebhookDataModule();
+            webhookData.RefreshWebhooksList(this);
+
+            if (SP_WebhooksList.Children.Count <= 0)
+            {
+                MessageBox.Show("Нет хуков, создайте =)", "Примечание", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            //else RefreshWebhooksList();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -109,18 +116,6 @@ namespace DiscordWebhookQM
             SP_MainPage.Children.Add(createWebhookPage);
             //WebhookListItem webhookItem = new WebhookListItem(this);
             //SP_WebhooksList.Children.Add(webhookItem);
-        }
-
-        private void RefreshWebhooksList()
-        {
-            WebhookListItem webhookList;
-            WebhookDataModule webhookData = new WebhookDataModule();
-
-            foreach (string currentFileName in Directory.GetFiles(webhookData.WebhooksPath))
-            {
-                var path = Path.GetFileName(currentFileName).Split('.');
-                SP_WebhooksList.Children.Add(webhookList = new WebhookListItem(this, path[0]));
-            }
         }
     }
 }

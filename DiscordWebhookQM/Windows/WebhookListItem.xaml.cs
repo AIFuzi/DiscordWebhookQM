@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DiscordWebhookQM.Modules;
+//using System.Windows.Forms;
 
 namespace DiscordWebhookQM.Windows
 {
@@ -29,7 +31,15 @@ namespace DiscordWebhookQM.Windows
 
         private void B_DeleteWebhook_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.SP_WebhooksList.Children.Remove(this);
+            System.Windows.Forms.DialogResult dgRes;
+            dgRes = (System.Windows.Forms.DialogResult)MessageBox.Show("Вы уверены что хотите удалить вебхук?", "Подтвердите", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (dgRes == System.Windows.Forms.DialogResult.Yes)
+            {
+                WebhookDataModule webhookData = new WebhookDataModule();
+                webhookData.DeleteWebhookProfile(TB_WebhookName.Text);
+                webhookData.RefreshWebhooksList(MainWindow);
+            }
         }
     }
 }
