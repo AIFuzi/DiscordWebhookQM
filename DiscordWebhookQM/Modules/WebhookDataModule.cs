@@ -12,22 +12,26 @@ namespace DiscordWebhookQM.Modules
     public class WebhookDataModule
     {
         private static string WebhooksPath = @"WebhooksProfiles";
+        private static string WebhooksAvatars = @"WebhooksAvatars";
 
-        public void tts()
+        public void InitWebhookModule()
         {
-            CheckWebhooksDirectory();
+            CheckWebhooksDirectory(WebhooksPath);
+            CheckWebhooksDirectory(WebhooksAvatars);
         }
 
-        private void CheckWebhooksDirectory()
+        private void CheckWebhooksDirectory(string directoryPath)
         {
-            DirectoryInfo directoryInfo = new DirectoryInfo(WebhooksPath);
+            DirectoryInfo directoryInfo = new DirectoryInfo(directoryPath);
             if(!directoryInfo.Exists) directoryInfo.Create();
 
         }
 
-        public void CreateWebhookData(string WebhookName, string WebhookURL)
+        public void CreateWebhookData(string webhookName, string webhookURL, string webhookAvatarPath)
         {
-
+            StreamWriter streamWriter = new StreamWriter($"{WebhooksPath}/{webhookName}.dwm");
+            streamWriter.Write("adad");
+            streamWriter.Close();
         }
     }
 }

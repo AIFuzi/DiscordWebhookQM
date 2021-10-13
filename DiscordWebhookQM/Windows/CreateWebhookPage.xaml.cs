@@ -26,7 +26,8 @@ namespace DiscordWebhookQM.Windows
         private void B_CreateWebhook_Click(object sender, RoutedEventArgs e)
         {
             WebhookDataModule wDataModule = new WebhookDataModule();
-            wDataModule.tts();
+            wDataModule.InitWebhookModule();
+            wDataModule.CreateWebhookData(TBx_WebhookName.Text, TBx_WebhoolURL.Text, null);
         }
     }
 }

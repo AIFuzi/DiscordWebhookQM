@@ -90,9 +90,11 @@
                    HorizontalAlignment="Right"
                    FontSize="16"/>
 
-            <TextBox Grid.Row="0" Grid.Column="1" Margin="5 10" VerticalContentAlignment="Center" FontSize="24"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="5 10" VerticalContentAlignment="Center" FontSize="24"
+                     x:Name="TBx_WebhoolURL"/>
 
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="5 10" VerticalContentAlignment="Center" FontSize="24"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="5 10" VerticalContentAlignment="Center" FontSize="24"
+                     x:Name="TBx_WebhookName"/>
 
             <Border Grid.Column="1" Grid.Row="2" BorderThickness="0" CornerRadius="50" Margin="15" Height="60" Width="60" 
                     HorizontalAlignment="Left">

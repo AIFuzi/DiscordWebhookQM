@@ -40,4 +40,3 @@ D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\CreateWebhookP
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\SendMessagePage.g.cs
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\CreateWebhookPage.baml
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\SendMessagePage.baml
-D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.AssemblyReference.cache
