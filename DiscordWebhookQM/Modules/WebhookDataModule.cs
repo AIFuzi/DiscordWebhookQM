@@ -5,22 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
+using System.Windows;
 
 namespace DiscordWebhookQM.Modules
 {
-    class WebhookDataModule
+    public class WebhookDataModule
     {
-        private static string WebhooksPath = "@WebhooksProfile";
+        private static string WebhooksPath = @"WebhooksProfile";
 
-        public static bool CheckWebhooksDirectory()
+        public void tts()
+        {
+            CheckWebhooksDirectory();
+        }
+
+        private void CheckWebhooksDirectory()
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(WebhooksPath);
-            if()
-            {
+            if(!directoryInfo.Exists) directoryInfo.Create();
 
-            }
+        }
 
-            return false;
+        public void CreateWebhookData(string WebhookName, string WebhookURL)
+        {
+
         }
     }
 }
