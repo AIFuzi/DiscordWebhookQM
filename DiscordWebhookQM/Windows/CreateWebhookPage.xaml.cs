@@ -32,7 +32,8 @@ namespace DiscordWebhookQM.Windows
             WebhookDataModule wDataModule = new WebhookDataModule();
             wDataModule.InitWebhookModule();
             wDataModule.CreateWebhookData(TBx_WebhookName.Text, TBx_WebhoolURL.Text, null);
-            string webhookName = wDataModule.LoadWebhookProfiles();
+            //string webhookName = wDataModule.LoadWebhookProfiles();
+            string webhookName = wDataModule.LoadWebhookProfiles_Auto();
 
             WebhookListItem webhookList = new WebhookListItem(MainWindow, webhookName);
             MainWindow.SP_WebhooksList.Children.Add(webhookList);

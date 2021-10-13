@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.IO;
 using Newtonsoft.Json;
 using DiscordWebhookQM.Windows;
+using DiscordWebhookQM.Modules;
 
 namespace DiscordWebhookQM
 {
@@ -18,6 +19,11 @@ namespace DiscordWebhookQM
             InitializeComponent();
 
             
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            RefreshWebhooksList();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -105,5 +111,16 @@ namespace DiscordWebhookQM
             //SP_WebhooksList.Children.Add(webhookItem);
         }
 
+        private void RefreshWebhooksList()
+        {
+            WebhookListItem webhookList;
+            WebhookDataModule webhookData = new WebhookDataModule();
+
+            foreach (string currentFileName in Directory.GetFiles(webhookData.WebhooksPath))
+            {
+                var path = Path.GetFileName(currentFileName).Split('.');
+                SP_WebhooksList.Children.Add(webhookList = new WebhookListItem(this, path[0]));
+            }
+        }
     }
 }

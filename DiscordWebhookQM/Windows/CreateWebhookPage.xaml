@@ -94,7 +94,7 @@
                      x:Name="TBx_WebhoolURL"/>
 
             <TextBox Grid.Row="1" Grid.Column="1" Margin="5 10" VerticalContentAlignment="Center" FontSize="24"
-                     x:Name="TBx_WebhookName"/>
+                     x:Name="TBx_WebhookName" MaxLength="15"/>
 
             <Border Grid.Column="1" Grid.Row="2" BorderThickness="0" CornerRadius="50" Margin="15" Height="60" Width="60" 
                     HorizontalAlignment="Left">
@@ -104,10 +104,10 @@
             </Border>
 
             <Button Grid.Row="3" Grid.Column="1" x:Name="B_CreateWebhook" Background="Transparent" Click="B_CreateWebhook_Click"
-                    BorderBrush="#f534fa" Margin="10 2" BorderThickness="2" Content="Create" FontSize="24" 
-                    Foreground="#d4d4d4" Style="{DynamicResource ButtonStyle1}">
+                    BorderBrush="#4834d4" Margin="10 2" BorderThickness="5" Content="Create" FontSize="24" 
+                    Foreground="#fff" Style="{DynamicResource ButtonStyle1}">
                 <Button.Effect>
-                    <DropShadowEffect Color="#bb86fa" ShadowDepth="0" BlurRadius="10"/>
+                    <DropShadowEffect Color="#686de0" ShadowDepth="0" BlurRadius="15"/>
                 </Button.Effect>
             </Button>
 

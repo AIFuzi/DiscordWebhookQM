@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\
 DiscordWebhookQM
 none
 false
 DEBUG;TRACE
-D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\App.xaml
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\App.xaml
 4878596243
 
 91175515004
-15-896770017
+151983344716
 MainWindow.xaml;Windows\CreateWebhookPage.xaml;Windows\SendMessagePage.xaml;Windows\WebhookListItem.xaml;
 
 False

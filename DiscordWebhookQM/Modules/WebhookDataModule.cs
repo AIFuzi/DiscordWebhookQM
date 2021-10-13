@@ -12,8 +12,8 @@ namespace DiscordWebhookQM.Modules
 {
     public class WebhookDataModule
     {
-        private static string WebhooksPath = @"WebhooksProfiles";
-        private static string WebhooksAvatars = @"WebhooksAvatars";
+        public string WebhooksPath = @"WebhooksProfiles";
+        public string WebhooksAvatars = @"WebhooksAvatars";
 
         public void InitWebhookModule()
         {
@@ -34,7 +34,8 @@ namespace DiscordWebhookQM.Modules
 
             string jsonProfileInfo = JsonConvert.SerializeObject(new
             {
-                webhookUrl = webhookURL
+                webhookUrl = webhookURL,
+                webhookName = webhookName
             });
 
             streamWriter.Write(jsonProfileInfo);
@@ -46,11 +47,18 @@ namespace DiscordWebhookQM.Modules
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             DialogResult dgRes = fileDialog.ShowDialog();
-            if(dgRes == DialogResult.OK)
+            if (dgRes == DialogResult.OK)
             {
                 var path = Path.GetFileName(fileDialog.FileName).Split('.');
                 return path[0];
             }
+
+            return null;
+        }
+
+        public string LoadWebhookProfiles_Auto()
+        {
+
 
             return null;
         }

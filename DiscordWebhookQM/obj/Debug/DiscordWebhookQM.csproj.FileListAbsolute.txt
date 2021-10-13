@@ -1,7 +1,6 @@
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\DiscordWebhookQM.exe.config
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\DiscordWebhookQM.exe
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\bin\Debug\DiscordWebhookQM.pdb
-H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.AssemblyReference.cache
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\MainWindow.g.cs
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\App.g.cs
 H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM_MarkupCompile.cache
@@ -41,3 +40,8 @@ D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\SendMessagePag
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\CreateWebhookPage.baml
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\SendMessagePage.baml
 D:\Vsprojects\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.AssemblyReference.cache
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\CreateWebhookPage.g.cs
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\SendMessagePage.g.cs
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\CreateWebhookPage.baml
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\Windows\SendMessagePage.baml
+H:\VSProject\DiscordWebhookQM\DiscordWebhookQM\obj\Debug\DiscordWebhookQM.csproj.AssemblyReference.cache
