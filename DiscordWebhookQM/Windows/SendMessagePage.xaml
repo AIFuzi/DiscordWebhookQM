@@ -35,7 +35,7 @@
                    HorizontalAlignment="Right"
                    FontSize="16"/>
 
-            <TextBox Grid.Row="2" Grid.Column="1" Margin="5 10" FontSize="16"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="5 10" FontSize="16" x:Name="TBx_Message"/>
 
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Image URL" Foreground="#fff" VerticalAlignment="Center" 
                    HorizontalAlignment="Right"
@@ -43,7 +43,8 @@
 
             <TextBox Grid.Row="3" Grid.Column="1" Margin="5 10"/>
 
-            <Button Grid.Column="1" Grid.Row="4" Margin="5 10" Content="Send" FontSize="18"/>
+            <Button Grid.Column="1" Grid.Row="4" Margin="5 10" Content="Send" FontSize="18" x:Name="B_SendMessage"
+                    Click="B_SendMessage_Click"/>
 
         </Grid>
     </Grid>
