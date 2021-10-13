@@ -22,7 +22,7 @@ namespace DiscordWebhookQM.Windows
         private void B_SendMessage_Click(object sender, RoutedEventArgs e)
         {
             WebhookMessageModule webhookMessage = new WebhookMessageModule();
-            webhookMessage.SendMessage(TBx_Message.Text, TBx_WebhookURL.Text, null);
+            webhookMessage.SendMessage(TBx_Message.Text, TBx_WebhookURL.Text, TBx_ImageUrl.Text);
         }
     }
 }

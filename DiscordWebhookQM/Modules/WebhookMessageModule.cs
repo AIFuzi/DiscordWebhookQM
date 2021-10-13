@@ -24,21 +24,33 @@ namespace DiscordWebhookQM.Modules
             {
                 using (var messageWriter = new StreamWriter(wRequest.GetRequestStream()))
                 {
-                    string jsonMsg = JsonConvert.SerializeObject(new
+                    string jsonMsg = "";
+                    if (ImageUrl != "")
                     {
-                        username = "",
-                        content = Message,
-                        //embeds = new[]
-                        //{
-                        //    new
-                        //    {
-                        //        title = "",
-                        //        description = "",
-                        //        color = col,
-                        //        image = new { url = TB_ImageUrl.Text }
-                        //    }
-                        //}
-                    });
+                        jsonMsg = JsonConvert.SerializeObject(new
+                        {
+                            username = "",
+                            content = Message,
+                            embeds = new[]
+                            {
+                                new
+                                {
+                                    title = "",
+                                    description = "",
+                                    color = col,
+                                    image = new { url = ImageUrl }
+                                }
+                            }
+                        });
+                    }
+                    else
+                    {
+                        jsonMsg = JsonConvert.SerializeObject(new
+                        {
+                            username = "",
+                            content = Message,
+                        });
+                    }
 
                     messageWriter.Write(jsonMsg);
                 }

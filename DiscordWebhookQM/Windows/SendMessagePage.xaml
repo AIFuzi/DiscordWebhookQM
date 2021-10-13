@@ -41,7 +41,7 @@
                    HorizontalAlignment="Right"
                    FontSize="16"/>
 
-            <TextBox Grid.Row="3" Grid.Column="1" Margin="5 10"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="5 10" x:Name="TBx_ImageUrl"/>
 
             <Button Grid.Column="1" Grid.Row="4" Margin="5 10" Content="Send" FontSize="18" x:Name="B_SendMessage"
                     Click="B_SendMessage_Click"/>
