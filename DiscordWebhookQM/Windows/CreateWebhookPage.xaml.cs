@@ -33,6 +33,20 @@ namespace DiscordWebhookQM.Windows
             wDataModule.InitWebhookModule();
             wDataModule.CreateWebhookData(TBx_WebhookName.Text, TBx_WebhoolURL.Text, null);
             wDataModule.RefreshWebhooksList(MainWindow);
+            wDataModule.SaveAvatar(IB_AvatarPrevie, TBx_WebhookName.Text);
+        }
+
+        private void B_SelectAvatar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Forms.OpenFileDialog imageSelectDialog = new System.Windows.Forms.OpenFileDialog();
+            imageSelectDialog.Filter = "png (*.png)|*.png| jpg(*.jpg)|*.jpg";
+
+            System.Windows.Forms.DialogResult dgRes = imageSelectDialog.ShowDialog();
+            if(dgRes == System.Windows.Forms.DialogResult.OK)
+            {
+                var avatarImage = new BitmapImage(new Uri(imageSelectDialog.FileName));
+                IB_AvatarPrevie.ImageSource = avatarImage;
+            }
         }
     }
 }

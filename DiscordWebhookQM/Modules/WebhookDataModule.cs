@@ -8,6 +8,8 @@ using Newtonsoft.Json;
 using System.Windows;
 using System.Windows.Forms;
 using DiscordWebhookQM.Windows;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace DiscordWebhookQM.Modules
 {
@@ -72,6 +74,25 @@ namespace DiscordWebhookQM.Modules
         public void DeleteWebhookProfile(string WebhookName)
         {
             File.Delete($"{WebhooksPath}/{WebhookName}.dwm");
+        }
+        
+        public void SaveAvatar(ImageBrush AvatarImage, string WebhookName)
+        {
+            BitmapSource avatarImg = (BitmapSource)AvatarImage.ImageSource;
+            string avatarPath = $"{WebhooksAvatars}/{WebhookName}.jpg";
+            using (FileStream fileStream = new FileStream(avatarPath, FileMode.OpenOrCreate))
+            {
+                BitmapFrame frame = BitmapFrame.Create(avatarImg);
+
+                JpegBitmapEncoder jpegAvatar = new JpegBitmapEncoder();
+                jpegAvatar.Frames.Add(frame);
+                jpegAvatar.Save(fileStream);
+            }
+        }
+
+        public void LoadAvatar(ImageBrush AvatarImage, string WebhookName)
+        {
+
         }
     }
 }

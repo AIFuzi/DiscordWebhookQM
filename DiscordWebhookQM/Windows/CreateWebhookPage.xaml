@@ -97,15 +97,15 @@
                      x:Name="TBx_WebhookName" MaxLength="15"/>
 
             <Border Grid.Column="1" Grid.Row="2" BorderThickness="0" CornerRadius="50" Margin="15" Height="60" Width="60" 
-                    HorizontalAlignment="Left">
+                    HorizontalAlignment="Left" x:Name="B_SelectAvatar" MouseLeftButtonDown="B_SelectAvatar_MouseLeftButtonDown">
                 <Border.Background>
-                    <ImageBrush Stretch="Fill" ImageSource="../DefaultAssets/DarthDeb.jpg"/>
+                    <ImageBrush Stretch="Fill" x:Name="IB_AvatarPrevie" ImageSource="../DefaultAssets/DarthDeb.jpg"/>
                 </Border.Background>
             </Border>
 
             <Button Grid.Row="3" Grid.Column="1" x:Name="B_CreateWebhook" Background="Transparent" Click="B_CreateWebhook_Click"
                     BorderBrush="#4834d4" Margin="10 2" BorderThickness="5" Content="Create" FontSize="24" 
-                    Foreground="#fff" Style="{DynamicResource ButtonStyle1}">
+                    Foreground="#fff" Style="{DynamicResource ButtonStyle1}" HorizontalAlignment="Left" Padding="20 0">
                 <Button.Effect>
                     <DropShadowEffect Color="#686de0" ShadowDepth="0" BlurRadius="15"/>
                 </Button.Effect>
