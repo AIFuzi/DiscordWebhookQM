@@ -11,7 +11,7 @@ namespace DiscordWebhookQM.Modules
 {
     public class WebhookDataModule
     {
-        private static string WebhooksPath = @"WebhooksProfile";
+        private static string WebhooksPath = @"WebhooksProfiles";
 
         public void tts()
         {
