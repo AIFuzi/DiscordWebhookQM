@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DiscordWebhookQM.Modules;
 
 namespace DiscordWebhookQM.Windows
 {
@@ -22,6 +23,12 @@ namespace DiscordWebhookQM.Windows
             InitializeComponent();
 
             TB_WebhookNameTitle.Text = webhookName;
+        }
+
+        private void SendMessagePage_Loaded(object sender, RoutedEventArgs e)
+        {
+            WebhookDataModule webhookData = new WebhookDataModule();
+            TBx_WebhookURL.Text = webhookData.GetWebhookURLByName(TB_WebhookNameTitle.Text);
         }
     }
 }

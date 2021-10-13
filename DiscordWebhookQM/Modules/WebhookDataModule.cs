@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using DiscordWebhookQM.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
+using Newtonsoft.Json.Linq;
 
 namespace DiscordWebhookQM.Modules
 {
@@ -97,10 +98,13 @@ namespace DiscordWebhookQM.Modules
             }
         }
 
-        public string GetWebhookURLByName()
+        public string GetWebhookURLByName(string WebhookName)
         {
+            var webhookPath = File.ReadAllText($"{WebhooksPath}/{WebhookName}.dwm"); 
+            var jObj = JObject.Parse(webhookPath);
+            var res = jObj["webhookUrl"];
 
-            return null;
+            return res.ToString();
         }
     }
 }
