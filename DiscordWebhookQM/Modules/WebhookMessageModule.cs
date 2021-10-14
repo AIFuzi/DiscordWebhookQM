@@ -13,11 +13,16 @@ namespace DiscordWebhookQM.Modules
     {
         private WebRequest wRequest;
 
-        public void SendMessage(string Message, string webhookUrl, string ImageUrl)
+        public void SendMessage(string Message, string webhookUrl, string ImageUrl, string HexColor)
         {
             InitWebTH(webhookUrl);
 
-            string hrx = "e67e22";
+            string hrx = "ffffff"; ;
+            if (HexColor != "")
+            {
+                var hCol = HexColor.Split('#');
+                hrx = hCol[1];
+            }
             int col = Convert.ToInt32(hrx, 16);
 
             try
